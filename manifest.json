@@ -1,0 +1,10 @@
+{
+  "name": "Portfolio Management PWA",
+  "short_name": "Portfolio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#172554",
+  "description": "Portfolio management Progressive Web App using ES6 JavaScript.",
+  "icons": []
+}

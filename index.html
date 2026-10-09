@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172554">
+  <link rel="manifest" href="manifest.json">
+  <title>Portfolio Management - ES6 PWA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Portfolio Management</h1>
+    <p>ES6 + Progressive Web App</p>
+  </header>
+
+  <main class="container">
+    <section class="summary">
+      <div class="balance-card">
+        <span>Available Balance</span>
+        <strong id="balance">$26,000.00</strong>
+      </div>
+      <div class="info-card">
+        <span>Holdings</span>
+        <strong id="holdingCount">0</strong>
+      </div>
+      <div class="info-card">
+        <span>App Status</span>
+        <strong id="status">Online</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Your Holdings</h2>
+        <button id="transactionBtn" class="btn secondary">Buy / Sell</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th><th>Price</th><th>Quantity</th>
+              <th>Sector</th><th>FNO Available</th><th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="holdingsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Top Recommendations</h2>
+        <div id="recommendations"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Details</h2>
+        <div id="details" class="details">Select a security to view details.</div>
+      </div>
+    </section>
+
+    <section class="panel form-panel">
+      <h2>Add Security to Holdings</h2>
+      <form id="securityForm">
+        <div class="form-grid">
+          <label>Security Name
+            <input name="name" required placeholder="e.g. Infosys Ltd">
+          </label>
+          <label>Price
+            <input name="price" type="number" min="0.01" step="0.01" required placeholder="1966">
+          </label>
+          <label>Quantity
+            <input name="quantity" type="number" min="1" step="1" required placeholder="50">
+          </label>
+          <label>Sector
+            <select name="sector" required>
+              <option value="">Select sector</option>
+              <option>Technology</option>
+              <option>Banking</option>
+              <option>E-Commerce</option>
+              <option>Media</option>
+              <option>Healthcare</option>
+              <option>Energy</option>
+            </select>
+          </label>
+        </div>
+        <label class="checkbox">
+          <input name="fnoAvailable" type="checkbox">
+          Is FNO Available?
+        </label>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Save Security</button>
+          <button class="btn reset" type="reset">Reset</button>
+        </div>
+        <p id="formMessage" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>Portfolio Management PWA • ES6 Demo</footer>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
